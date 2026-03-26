@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BotMessageSquare, Github, MessageCircle } from 'lucide-react';
+import { BotMessageSquare, MessageCircle } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa'; // Naya Github icon
 import Background from './components/Background';
 
 const staggerContainer = {
@@ -98,6 +99,15 @@ export default function App() {
             />
           </div>
         </motion.section>
+
+        <footer className="p-16 border-t border-gray-900 bg-black text-center relative z-20">
+          <motion.h4 variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} className="text-3xl font-bold text-white mb-8">Nex Ecosystem Support</motion.h4>
+          <motion.div variants={fadeIn} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} className="flex justify-center gap-12 text-purple-400 text-lg">
+            <a href="#" className="hover:text-white flex items-center gap-3"><MessageCircle size={24} /> Support Group</a>
+            <a href="#" className="hover:text-white flex items-center gap-3"><FaGithub size={24} /> Github</a>
+          </motion.div>
+          <p className="text-gray-600 mt-12 text-sm">© 2026 Nex Networks. Managed by HellfireDevs.</p>
+        </footer>
       </div>
     </div>
   );
